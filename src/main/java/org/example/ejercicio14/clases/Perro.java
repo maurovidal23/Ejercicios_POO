@@ -4,13 +4,14 @@ import org.example.ejercicio13.clases.Mascota;
 
 public class Perro extends Mascota implements ISexual{
 
-    String sexo;
-    public Perro(String raza, String nombre, String propietario, String sexo) {
+    //String sexo;
+    private boolean masculino;
+    public Perro(String raza, String nombre, String propietario, boolean sexo) {
         super(REINO.MAMIFERO, TIPO.PERRO, raza, MEDIO.TERRESTRE, nombre, propietario);
-        this.sexo=sexo;
+        this.masculino=sexo;
     }
     public Perro clone(){
-        Perro p= new Perro(this.getRaza(),this.getNombre(),this.getPropietario(),this.sexo);
+        Perro p= new Perro(this.getRaza(),this.getNombre(),this.getPropietario(),this.masculino);
         return p;
     }
 
@@ -21,7 +22,7 @@ public class Perro extends Mascota implements ISexual{
     public void desplazamiento(){
         System.out.println("Desplazamiento 4 patas");
     }
-
+/*
     @Override
     public String getSexo() {
         return sexo;
@@ -30,5 +31,17 @@ public class Perro extends Mascota implements ISexual{
     @Override
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+ */
+
+    @Override
+    public boolean isMasculino() {
+        return masculino;
+    }
+
+    @Override
+    public void setMasculino(boolean masculino) {
+        this.masculino = masculino;
     }
 }

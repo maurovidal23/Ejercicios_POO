@@ -2,21 +2,29 @@ package org.example.ejercicio14.clases;
 import org.example.ejercicio13.clases.Mascota;
 
 public class Gato extends Mascota implements ISexual{
-    private String sexo;
+    //private String sexo;
+    private boolean masculino;
 
+    public boolean isMasculino() {
+        return masculino;
+    }
 
-    public Gato(String raza, String nombre, String propietario, String sexo) {
+    public void setMasculino(boolean sexo) {
+        masculino = sexo;
+    }
+
+    public Gato(String raza, String nombre, String propietario, Boolean sexo) {
         super(REINO.MAMIFERO, TIPO.GATO, raza, MEDIO.TERRESTRE, nombre, propietario);
-        this.sexo=sexo;
+        this.masculino=sexo;
     }
 
 
 
     public Gato clone(){
-        Gato g=new Gato(this.getRaza(),this.getNombre(),this.getPropietario(),this.sexo);
+        Gato g=new Gato(this.getRaza(),this.getNombre(),this.getPropietario(),this.masculino);
         return g;
     }
-
+/*
     @Override
     public String getSexo() {
         return sexo;
@@ -26,7 +34,7 @@ public class Gato extends Mascota implements ISexual{
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-
+*/
     public void reproducirSonido(){
         System.out.println("MIAU");
     }
