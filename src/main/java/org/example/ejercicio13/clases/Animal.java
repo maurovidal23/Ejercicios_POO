@@ -4,7 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class Animal {
-
+    public enum SEXO{
+        MASCULINO,
+        FEMENINO
+    }
     private REINO reino;
     //public static final String MAMIFERO= "Mamifero";
     public enum REINO{
