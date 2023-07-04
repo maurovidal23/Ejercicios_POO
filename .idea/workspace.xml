@@ -4,49 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3161b309-fa39-4470-956f-33a14060b58f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio01/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio02/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio03/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio04/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio05/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio06/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio07/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio08/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio09/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio09/clases/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio10/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio10/clase/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio11/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio11/clases/AnimalGranja.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio11/clases/AnimalSalvaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio11/clases/IPropietario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio11/clases/Mascota.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio12/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio12/clases/Gato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio12/clases/Oveja.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio12/clases/Perro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio12/clases/PezPayaso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio12/clases/Tucan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio12/clases/Vaca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/AnimalGranja.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/AnimalSalvaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/Gato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/Mascota.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/Oveja.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/Perro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio14/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio14/clases/ISexual.java" afterDir="false" />
+    <list default="true" id="3161b309-fa39-4470-956f-33a14060b58f" name="Changes" comment="1.0">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/Tucan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/Vaca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/PezPayaso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/PezPayaso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio14/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio14/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +63,37 @@
       <option name="presentableId" value="Default" />
       <updated>1688451436278</updated>
     </task>
+    <task id="LOCAL-00001" summary="1.0">
+      <created>1688471297509</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688471297509</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1.0">
+      <created>1688471329643</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688471329643</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,6 @@
 package org.example.ejercicio13.clases;
 
-import org.example.ejercicio11.clases.AnimalSalvaje;
+import org.example.ejercicio13.clases.AnimalSalvaje;
 
 public class PezPayaso extends AnimalSalvaje {
     public PezPayaso(String raza) {
