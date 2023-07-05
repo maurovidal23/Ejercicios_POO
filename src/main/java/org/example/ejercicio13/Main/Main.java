@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main (String[]Args){
-        Gato g = new Gato("persa","Paco","Yo");
+        Gato g = new Gato("persa",false,"Paco","Yo");
         g.reproducirSonido();
         g.desplazamiento();
     }

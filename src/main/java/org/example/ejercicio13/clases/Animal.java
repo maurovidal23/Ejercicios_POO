@@ -1,9 +1,11 @@
 package org.example.ejercicio13.clases;
 
+import org.example.ejercicio14.clases.ISexual;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class Animal {
+public abstract class Animal  implements ISexual {
     public enum SEXO{
         MASCULINO,
         FEMENINO
@@ -40,6 +42,11 @@ public abstract class Animal {
     }
     public static Map<MEDIO,String> nombresMedios;
 
+    private boolean masculino;
+    private int numeroCrias;
+    private Animal padre;
+    private Animal madre;
+    private int generacion=1;
     //Constructor de copia
 
     public Animal(Animal animalCopia){
@@ -48,25 +55,45 @@ public abstract class Animal {
         this.raza=animalCopia.raza;
         this.medio=animalCopia.medio;
     }
-    public Animal(REINO reino, TIPO tipo, String raza, MEDIO medio) {
+    public Animal(REINO reino, TIPO tipo, String raza, MEDIO medio,boolean sexo) {
         this.reino = reino;
         this.tipo = tipo;
         this.raza = raza;
         this.medio = medio;
+        this.masculino=sexo;
         Animal.rellenarMapas();
+
     }
 
 
-    public Animal(REINO reino, TIPO tipo, String raza) {
+    public Animal(REINO reino, TIPO tipo, String raza,boolean sexo) {
         this.reino = reino;
         this.tipo = tipo;
         this.raza = raza;
+        this.masculino=sexo;
         Animal.rellenarMapas();
     }
 
     public Animal() {
     }
 
+    public Animal(REINO reino, TIPO tipo, String raza, MEDIO medio, Animal padre, Animal madre, int generacion, boolean sexo) {
+        this.reino = reino;
+        this.tipo = tipo;
+        this.raza = raza;
+        this.medio = medio;
+        this.padre = padre;
+        this.madre = madre;
+        this.generacion=generacion;
+        this.masculino=sexo;
+        padre.sumarCrias();
+        madre.sumarCrias();
+    }
+
+    public void sumarCrias(){
+        this.numeroCrias++;
+
+    }
     private static void rellenarMapas(){
         if(Animal.nombresReinos==null){
             Animal.nombresReinos= new HashMap<>();
@@ -144,5 +171,47 @@ public abstract class Animal {
 
     public void setMedio(MEDIO medio) {
         this.medio = medio;
+    }
+
+    public int getNumeroCrias() {
+        return numeroCrias;
+    }
+
+    public void setNumeroCrias(int numeroCrias) {
+        this.numeroCrias = numeroCrias;
+    }
+
+    public Animal getPadre() {
+        return padre;
+    }
+
+    public void setPadre(Animal padre) {
+        this.padre = padre;
+    }
+
+    public Animal getMadre() {
+        return madre;
+    }
+
+    public void setMadre(Animal madre) {
+        this.madre = madre;
+    }
+
+    public int getGeneracion() {
+        return generacion;
+    }
+
+    public void setGeneracion(int generacion) {
+        this.generacion = generacion;
+    }
+
+    @Override
+    public boolean isMasculino() {
+        return masculino;
+    }
+
+    @Override
+    public void setMasculino(boolean masculino) {
+        this.masculino = masculino;
     }
 }

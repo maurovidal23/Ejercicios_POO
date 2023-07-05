@@ -7,8 +7,20 @@ public abstract class Mascota extends Animal implements IPropietario {
     String Nombre;
     String Propietario;
 
-    public Mascota(REINO reino, TIPO tipo, String raza, MEDIO medio, String nombre, String propietario) {
-        super(reino, tipo, raza, medio);
+    public Mascota(REINO reino, TIPO tipo, String raza, MEDIO medio, boolean sexo, String nombre, String propietario) {
+        super(reino, tipo, raza, medio, sexo);
+        Nombre = nombre;
+        Propietario = propietario;
+    }
+
+    public Mascota(REINO reino, TIPO tipo, String raza, boolean sexo, String nombre, String propietario) {
+        super(reino, tipo, raza, sexo);
+        Nombre = nombre;
+        Propietario = propietario;
+    }
+
+    public Mascota(REINO reino, TIPO tipo, String raza, MEDIO medio, Animal padre, Animal madre, int generacion, boolean sexo, String nombre, String propietario) {
+        super(reino, tipo, raza, medio, padre, madre, generacion, sexo);
         Nombre = nombre;
         Propietario = propietario;
     }

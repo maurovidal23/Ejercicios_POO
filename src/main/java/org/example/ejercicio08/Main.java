@@ -8,30 +8,32 @@ import java.util.Objects;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Double> lista = new ArrayList<Double>();
-        lista.add(3.1415);
-        lista.add(2.71828);
-        lista.add(1.618);
+
 
         boolean entrada_correcta = false;
         int seleccion = 0;
+        int continuar;
         while (entrada_correcta == false) {
             seleccion = Input.integer("A continuación introduce el número entero que hace referencia a la selección que le interesa: 1->a ; 2->b; 3->c");
-            if (seleccion == 1 || seleccion == 2 || seleccion == 3) {
-                entrada_correcta = true;
+            if (seleccion == 1) {
+                metodoA(lista);
+            }
+            if (seleccion == 2) {
+                metodoB(lista);
+            }
+            if (seleccion == 3) {
+                metodoC(lista);
+            }
+            System.out.println(lista);
+
+            continuar= Input.integer("Quieres continuar con el proceso (introduce la referencia numerica de tu seleccion)? 1->SI; 0->NO");
+            if(continuar==0){
+                entrada_correcta=true;
             }
         }
 
 
-        if (seleccion == 1) {
-            metodoA(lista);
-        }
-        if (seleccion == 2) {
-            metodoB(lista);
-        }
-        if (seleccion == 3) {
-            metodoC(lista);
-        }
-        System.out.println(lista);
+
     }
 
     public static ArrayList<Double> metodoA(ArrayList<Double> lista) {
