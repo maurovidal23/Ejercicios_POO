@@ -1,4 +1,4 @@
-package org.example.ejercicio13;
+package org.example.ejercicio13.Main;
 
 import org.example.ejercicio10.clase.Animal;
 import org.example.ejercicio13.clases.Gato;

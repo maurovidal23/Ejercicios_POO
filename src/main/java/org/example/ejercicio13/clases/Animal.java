@@ -17,7 +17,7 @@ public abstract class Animal {
         REPTILES,
         PECES
     }
-    private static Map<REINO,String> nombresReinos;
+    public static Map<REINO,String> nombresReinos;
 
     private TIPO tipo;
     public enum TIPO{
@@ -30,15 +30,15 @@ public abstract class Animal {
         VACA,
         OVEJA
     }
-    private static Map<TIPO,String> nombresTipos;
+    public static Map<TIPO,String> nombresTipos;
     private String raza;
-    public MEDIO medio;
+    private MEDIO medio;
     public enum MEDIO{
         ACUÁTICO,
         AEREO,
         TERRESTRE
     }
-    private static Map<MEDIO,String> nombresMedios;
+    public static Map<MEDIO,String> nombresMedios;
 
     //Constructor de copia
 

@@ -1,4 +1,4 @@
-package org.example.ejercicio12;
+package org.example.ejercicio12.Main;
 
 import org.example.ejercicio12.clases.*;
 

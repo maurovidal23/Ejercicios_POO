@@ -33,10 +33,9 @@ public abstract class Mascota extends Animal implements IPropietario {
     @Override
     public String toString() {
         return "Mascota{" +
-                "Nombre='" + Nombre + '\'' +
-                ", Propietario='" + Propietario + '\'' +
-                ", tipo=" + this.getTipo() +
-                ", raza='" + this.getRaza() + '\'' +
+                "Propietario='" + Propietario + '\'' +
+                ", tipo=" + Animal.nombresTipos.get(this.getTipo()) +
+                ", raza='" + this.getRaza() +
                 '}';
     }
 }

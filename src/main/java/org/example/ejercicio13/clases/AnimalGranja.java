@@ -24,12 +24,11 @@ public abstract class AnimalGranja extends Animal implements IPropietario {
 
     @Override
     public String toString() {
-        return "Animal_Granja{" +
+        return "AnimalGranja{" +
                 "Propietario='" + Propietario + '\'' +
-                ", tipo=" + this.getTipo()  +
-                ", raza='" + this.getRaza() + '\'' +
+                ", tipo=" + Animal.nombresTipos.get(this.getTipo()) +
+                ", raza='" + this.getRaza() +
                 '}';
     }
-
 
 }

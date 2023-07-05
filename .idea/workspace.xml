@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3161b309-fa39-4470-956f-33a14060b58f" name="Changes" comment="1.0">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio15/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio14/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio14/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio02/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio02/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio08/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio08/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio09/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio09/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio10/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio10/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio11/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio11/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio12/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio12/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/AnimalGranja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/AnimalGranja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/AnimalSalvaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/AnimalSalvaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/Mascota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/Mascota.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio14/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio14/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,18 +48,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "preferences.keymap"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;PLAIN_TEXT&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.ejercicio14.clases" />
@@ -101,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688485203748</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1.0">
+      <created>1688486162330</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688486162330</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

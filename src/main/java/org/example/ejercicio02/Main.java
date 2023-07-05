@@ -7,19 +7,19 @@ public class Main {
 
         int num = Input.integer();
 
-        System.out.print("El número "+ num + " tiene por divisores primos del 1 al 10: ");
+        System.out.print("El número " + num + " tiene por divisores primos del 1 al 10: ");
 
-        if(num%2==0){
+        if (num % 2 == 0) {
             System.out.print(2);
         }
-        if (num%3==0){
-            System.out.print("  "+3);
+        if (num % 3 == 0) {
+            System.out.print("  " + 3);
         }
-        if(num%5==0){
-            System.out.print("  " +5);
+        if (num % 5 == 0) {
+            System.out.print("  " + 5);
         }
-        if(num%7==0){
-            System.out.print("  " +7 );
+        if (num % 7 == 0) {
+            System.out.print("  " + 7);
         }
     }
 }
