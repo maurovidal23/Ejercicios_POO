@@ -1,9 +1,7 @@
-package org.example.ejercicio16;
-
+package org.example.ejercicio17;
 import org.example.ejercicio13.clases.*;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Main {
@@ -14,6 +12,11 @@ public class Main {
         listaAnimales.add(g_mas);
         Gato g_fem = new Gato("persa", false, "María", "Noe");
         listaAnimales.add(g_fem);
+        Gato g2_mas = new Gato("persa", true, "Gregorio", "Juan");
+        listaAnimales.add(g2_mas);
+        Gato g2_fem= new Gato("egipcio",false,"Gregorio","Pedro");
+        listaAnimales.add(g2_fem);
+
         int generacion = 1;
         int numPoblacion = 0;
         while (numPoblacion != listaAnimales.size()) {
@@ -28,16 +31,15 @@ public class Main {
                             && !parentescoPadre(i, j)
                             && numeroCriasPareja(i, j, animalesNuevos) < 3) {
                         if (i instanceof Gato) {
-
-                                generacion = Math.max(i.getGeneracion(), j.getGeneracion()) + 1;
-                                Random random = new Random();
-                                if (i.isMasculino()) {
-                                    animalesNuevos.add(new Gato(i.getRaza(), i, j, generacion, random.nextBoolean(), ((Gato) i).getNombre(), ((Gato) j).getPropietario()));
-                                } else {
-                                    animalesNuevos.add(new Gato(i.getRaza(), j, i, generacion, random.nextBoolean(), ((Gato) i).getNombre(), ((Gato) i).getPropietario()));
-                                }
-
+                            generacion = Math.max(i.getGeneracion(), j.getGeneracion()) + 1;
+                            Random random = new Random();
+                            if (i.isMasculino()) {
+                                animalesNuevos.add(new Gato(i.getRaza(), i, j, generacion, random.nextBoolean(), ((Gato) i).getNombre(), ((Gato) j).getPropietario()));
+                            } else {
+                                animalesNuevos.add(new Gato(i.getRaza(), j, i, generacion, random.nextBoolean(), ((Gato) i).getNombre(), ((Gato) i).getPropietario()));
+                            }
                         }
+
                         if (i instanceof Oveja) {
 
 
@@ -59,12 +61,22 @@ public class Main {
                 }
 
             }
-
             numPoblacion = listaAnimales.size();
             listaAnimales=animalesNuevos;
+
+
+        }
+        int maxGeneracion=1;
+        int index=0;
+        for(int i=0; i<listaAnimales.size();i++){
+            if(listaAnimales.get(i).getGeneracion()>maxGeneracion){
+                maxGeneracion=listaAnimales.get(i).getGeneracion();
+                index=i;
+            }
         }
         System.out.println(listaAnimales.size());
-        System.out.println(listaAnimales);
+        System.out.println(maxGeneracion);
+        System.out.println(listaAnimales.get(index));
     }
     public static boolean parentescoPadre(Animal animal1, Animal animal2) {
         //si los dos son de primera generación entonces no puede ser uno padre del otro
@@ -122,23 +134,21 @@ public class Main {
 
     public static boolean parentescoHermanos(Animal animal1, Animal animal2) {
         //Si uno es de primera generación no tiene padres por lo tanto no tiene hermanos
-       if(animal1.getGeneracion()==1||animal2.getGeneracion()==1){
-           return false;
-       }else{
-           //Si tienen el mismo padre o la misma madre son hermanos
-           if(animal1.getPadre().equals(animal2.getPadre())&&animal1.getMadre().equals(animal2.getMadre())){
-               return true;
-           }else{
-               return false;
-           }
-       }
+        if(animal1.getGeneracion()==1||animal2.getGeneracion()==1){
+            return false;
+        }else{
+            //Si tienen el mismo padre o la misma madre son hermanos
+            if(animal1.getPadre().equals(animal2.getPadre())||animal1.getMadre().equals(animal2.getMadre())){
+                return true;
+            }else{
+                return false;
+            }
+        }
 
     }
 
     public static int numeroCriasPareja(Animal animal1,Animal animal2,ArrayList<Animal> listaAnimales){
-
         int conteoCriasPareja=0;
-
         for(Animal i: listaAnimales){
             if(i.getGeneracion()==1||i.getGeneracion()==1){
 
