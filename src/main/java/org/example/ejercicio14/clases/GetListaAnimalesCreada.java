@@ -23,6 +23,7 @@ public class GetListaAnimalesCreada {
         PezPayaso pp_mas= new PezPayaso("comun",true);
         arcaNoe.add(pp_mas);
         PezPayaso pp_fem=new PezPayaso("comun",false);
+        arcaNoe.add(pp_fem);
         Tucan t_mas=new Tucan("amazonico",true);
         arcaNoe.add(t_mas);
         Tucan t_fem= new Tucan("amazonico",false);
@@ -63,14 +64,14 @@ public class GetListaAnimalesCreada {
         return arcaNoe;
     }
     public static ArrayList<Animal> recuperarListaCreada3() {
-        ArrayList<Animal> arcaNoe = new ArrayList<>();
+        ArrayList<Animal> listaAnimales = new ArrayList<>();
         Gato g_mas = new Gato("persa", true, "Firulais", "Noe");
-        arcaNoe.add(g_mas);
+        listaAnimales.add(g_mas);
         Gato g_fem = new Gato("persa", false, "María", "Noe");
-        arcaNoe.add(g_fem);
+        listaAnimales.add(g_fem);
         Gato g2_mas = new Gato("persa", true, "Gregorio", "Juan");
-        arcaNoe.add(g2_mas);
-        return arcaNoe;
+        listaAnimales.add(g2_mas);
+        return listaAnimales;
     }
 
 }

@@ -11,6 +11,7 @@ public abstract class AnimalSalvaje extends Animal {
         super(reino, tipo, raza, medio, padre, madre, generacion, sexo);
     }
 
+
     @Override
     public String toString() {
         return "AnimalSalvaje{" +

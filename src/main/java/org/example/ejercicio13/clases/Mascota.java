@@ -13,6 +13,19 @@ public abstract class Mascota extends Animal implements IPropietario {
         Propietario = propietario;
     }
 
+
+    public Mascota(REINO reino, TIPO tipo, MEDIO medio, boolean masculino, Animal padre, Animal madre, int generacion, int id, String nombre, String propietario) {
+        super(reino, tipo, medio, masculino, padre, madre, generacion, id);
+        Nombre = nombre;
+        Propietario = propietario;
+    }
+
+    public Mascota(REINO reino, TIPO tipo, MEDIO medio, boolean masculino, int idPadre, int idMadre, int generacion, int id, String nombre, String propietario) {
+        super(reino, tipo, medio, masculino, idPadre, idMadre, generacion, id);
+        Nombre = nombre;
+        Propietario = propietario;
+    }
+
     public Mascota(REINO reino, TIPO tipo, String raza, boolean sexo, String nombre, String propietario) {
         super(reino, tipo, raza, sexo);
         Nombre = nombre;
@@ -42,12 +55,13 @@ public abstract class Mascota extends Animal implements IPropietario {
         Propietario = propietario;
     }
 
+
     @Override
     public String toString() {
         return "Mascota{" +
-                "Propietario='" + Propietario + '\'' +
-                ", tipo=" + Animal.nombresTipos.get(this.getTipo()) +
-                ", raza='" + this.getRaza() +
+                "Nombre='" + Nombre + '\'' +
+                "Id='" + this.getId() + '\'' +
+                "Tipo='" + this.getTipo() + '\'' +
                 '}';
     }
 }

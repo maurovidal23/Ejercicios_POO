@@ -14,7 +14,9 @@ public class Gato extends Mascota implements ISexual {
         super(REINO.MAMIFERO, TIPO.GATO, raza,  MEDIO.TERRESTRE, padre, madre, generacion, sexo, nombre, propietario);
     }
 
-
+    public Gato( boolean masculino, int idPadre, int idMadre, int generacion, int id, String nombre, String propietario) {
+        super(REINO.MAMIFERO, TIPO.GATO, MEDIO.TERRESTRE, masculino, idPadre, idMadre, generacion, id, nombre, propietario);
+    }
 
     public Gato clone() {
         Gato g = new Gato(this.getRaza(), this.isMasculino(),this.getNombre(), this.getPropietario());

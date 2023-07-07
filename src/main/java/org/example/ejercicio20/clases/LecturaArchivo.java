@@ -1,4 +1,4 @@
-package org.example.ejercicio20;
+package org.example.ejercicio20.clases;
 
 import org.example.ejercicio13.clases.Animal;
 import org.example.ejercicio13.clases.Gato;
@@ -38,11 +38,11 @@ public class LecturaArchivo {
                 int id = Integer.valueOf(parts[0]);
                 boolean masculino = Boolean.valueOf(parts[7]);
                 //String padre = i.getPadre() == null ? "" : String.valueOf(i.getPadre().getId());
-                int idPadre = parts[3].equals("") ? 0 : Integer.valueOf(parts[3]);
-                int idMadre = parts[4].equals("") ? 0 : Integer.valueOf(parts[4]);
+                int idPadre = parts[3].equals("0") ?  0 : Integer.valueOf(parts[3]);
+                int idMadre = parts[4].equals("0") ?  0 : Integer.valueOf(parts[4]);
                 int generacion = Integer.valueOf(parts[6]);
 
-                Gato g = new Gato(id, masculino, idPadre, idMadre, generacion, parts[1], parts[5]);
+                Gato g = new Gato(masculino, idPadre, idMadre, generacion, id,parts[1], parts[5]);
                 //System.out.println(g);
                 listaAnimales.add(g);
             }

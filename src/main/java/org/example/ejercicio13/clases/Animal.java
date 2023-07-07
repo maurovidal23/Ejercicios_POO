@@ -45,8 +45,15 @@ public abstract class Animal  implements ISexual {
     private boolean masculino;
     private int numeroCrias;
     private Animal padre;
+    private int idPadre;
+    private int idMadre;
     private Animal madre;
     private int generacion=1;
+
+    private int id;
+    private static int idAnimales=0;
+
+    private static Map<Integer,Animal> idAnimalRef;
     //Constructor de copia
 
     public Animal(Animal animalCopia){
@@ -54,6 +61,8 @@ public abstract class Animal  implements ISexual {
         this.tipo=animalCopia.tipo;
         this.raza=animalCopia.raza;
         this.medio=animalCopia.medio;
+        this.id=generarId();
+        rellenarAnimalRef(this);
     }
     public Animal(REINO reino, TIPO tipo, String raza, MEDIO medio,boolean sexo) {
         this.reino = reino;
@@ -62,6 +71,8 @@ public abstract class Animal  implements ISexual {
         this.medio = medio;
         this.masculino=sexo;
         Animal.rellenarMapas();
+        this.id=generarId();
+        rellenarAnimalRef(this);
 
     }
 
@@ -72,9 +83,37 @@ public abstract class Animal  implements ISexual {
         this.raza = raza;
         this.masculino=sexo;
         Animal.rellenarMapas();
+        this.id=generarId();
+        rellenarAnimalRef(this);
     }
 
     public Animal() {
+    }
+
+    public Animal(REINO reino, TIPO tipo, MEDIO medio, boolean masculino, Animal padre, Animal madre, int generacion, int id) {
+        this.reino = reino;
+        this.tipo = tipo;
+        this.medio = medio;
+        this.masculino = masculino;
+        this.padre = padre;
+        this.madre = madre;
+        this.generacion = generacion;
+        this.id = id;
+        rellenarAnimalRef(this);
+    }
+
+    public Animal(REINO reino, TIPO tipo, MEDIO medio, boolean masculino, int idPadre,int idMadre, int generacion, int id) {
+        this.reino = reino;
+        this.tipo = tipo;
+        this.medio = medio;
+        this.masculino = masculino;
+        this.idPadre = idPadre;
+        this.idMadre = idMadre;
+        this.generacion = generacion;
+        this.id = id;
+        this.padre=fijarPadre();
+        this.madre=fijarMadre();
+        rellenarAnimalRef(this);
     }
 
     public Animal(REINO reino, TIPO tipo, String raza, MEDIO medio, Animal padre, Animal madre, int generacion, boolean sexo) {
@@ -88,11 +127,42 @@ public abstract class Animal  implements ISexual {
         this.masculino=sexo;
         padre.sumarCrias();
         madre.sumarCrias();
+        this.id=generarId();
+        rellenarAnimalRef(this);
     }
 
+    public Animal fijarPadre(){
+        if(this.idPadre!=0){
+            Animal a= idAnimalRef.get(this.idPadre);
+            return a;
+        }else{
+            return null;
+        }
+
+    }
+    public Animal fijarMadre(){
+        if(this.idMadre!=0){
+            Animal a=idAnimalRef.get(this.idPadre);
+            return a;
+        }else{
+            return null;
+        }
+
+    }
+    public int generarId(){
+        idAnimales++;
+        return idAnimales;
+    }
     public void sumarCrias(){
         this.numeroCrias++;
 
+    }
+
+    private static void rellenarAnimalRef(Animal a){
+        if(Animal.idAnimalRef==null){
+            Animal.idAnimalRef= new HashMap<>();
+        }
+        idAnimalRef.put(a.getId(),a);
     }
     private static void rellenarMapas(){
         if(Animal.nombresReinos==null){
@@ -213,5 +283,37 @@ public abstract class Animal  implements ISexual {
     @Override
     public void setMasculino(boolean masculino) {
         this.masculino = masculino;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public static Map<Integer, Animal> getIdAnimalRef() {
+        return idAnimalRef;
+    }
+
+    public static void setIdAnimalRef(Map<Integer, Animal> idAnimalRef) {
+        Animal.idAnimalRef = idAnimalRef;
+    }
+
+    public int getIdPadre() {
+        return idPadre;
+    }
+
+    public void setIdPadre(int idPadre) {
+        this.idPadre = idPadre;
+    }
+
+    public int getIdMadre() {
+        return idMadre;
+    }
+
+    public void setIdMadre(int idMadre) {
+        this.idMadre = idMadre;
     }
 }

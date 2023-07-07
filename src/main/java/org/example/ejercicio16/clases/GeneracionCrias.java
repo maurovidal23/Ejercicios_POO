@@ -7,10 +7,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class GeneracionCrias {
-    public static ArrayList<Animal> animalesNuevos;
-    public static ArrayList<Animal> listaAnimales;
 
-    public static ArrayList<Animal> devulveListaCrias(ArrayList<Animal> animalesIniciales) {
+
+   /* public static ArrayList<Animal> devulveListaCrias(ArrayList<Animal> animalesIniciales) {
         ArrayList<Animal> listaAnimales = new ArrayList<>();
 
         listaAnimales = animalesIniciales;
@@ -28,10 +27,15 @@ public class GeneracionCrias {
                             && !parentescoMadre(i, j)
                             && !parentescoPadre(i, j)
                             && numeroCriasPareja(i, j, animalesNuevos) < 3) {
-                        if (i instanceof Gato) {
+                        Animal padre=i.isMasculino()? i:j;
+                        Animal madre=i.isMasculino()?j:i;
+                        generacion = Math.max(i.getGeneracion(), j.getGeneracion()) + 1;
+                        Random random = new Random();
 
+                        if (i instanceof Gato) {
                             generacion = Math.max(i.getGeneracion(), j.getGeneracion()) + 1;
                             Random random = new Random();
+                            //animalesNuevos.add(new Gato(i.getRaza(), padre, madre, generacion, random.nextBoolean(), ((Gato) padre).getNombre(), ((Gato) madre).getPropietario()));
                             if (i.isMasculino()) {
                                 animalesNuevos.add(new Gato(i.getRaza(), i, j, generacion, random.nextBoolean(), ((Gato) i).getNombre(), ((Gato) j).getPropietario()));
                             } else {
@@ -101,128 +105,77 @@ public class GeneracionCrias {
         return listaAnimales;
     }
 
-    public static ArrayList<Animal> devulveListaCriasCapadoGen4(ArrayList<Animal> animalesIniciales) {
-        ArrayList<Animal> listaAnimales = new ArrayList<>();
+    */
 
-        int generacion = 1;
-        int numPoblacion = 0;
-        int maxGeneracion = 1;
+
+    public static ArrayList<Animal> devulveListaCrias(ArrayList<Animal> listaInicial,int maxCrias) {
+        ArrayList<Animal> listaAnimales = new ArrayList<>();
+        listaAnimales = listaInicial;
+
 
         //el while nos permite controlar cuando deja de crear nuevos bichos (paramos en la generacion 4)
-        while (maxGeneracion <= 4) {
-            //instaciamos la lista nueva que vamos a modificar dentro del bucle y la igualamos a la
-            //listaAnimales de la iteración anterior
-            ArrayList<Animal> animalesNuevos = new ArrayList<>();
-            animalesNuevos.addAll(listaAnimales);
 
-            //recorremos todas las opciones, se podría optimizar usando solo la parte superior de la matriz
-            //pero como es simetrica solo nos libramos de las i=j (que son n iteraciones)
-            for (Animal i : listaAnimales) {
-                for (Animal j : listaAnimales) {
-                    //Pasamos todos los criterios que tiene que pasar para crearse una nueva cría
+        //instaciamos la lista nueva que vamos a modificar dentro del bucle y la igualamos a la
+        //listaAnimales de la iteración anterior
+        ArrayList<Animal> animalesNuevos = new ArrayList<>();
+        animalesNuevos.addAll(listaAnimales);
+        int generacion;
+        //recorremos todas las opciones, se podría optimizar usando solo la parte superior de la matriz
+        //pero como es simetrica solo nos libramos de las i=j (que son n iteraciones)
+        for (Animal i : listaAnimales) {
+            for (Animal j : listaAnimales) {
+                //Pasamos todos los criterios que tiene que pasar para crearse una nueva cría
 
-                    if (i.getClass() == j.getClass()
-                            //comprueba los sexos
-                            && i.isMasculino() != j.isMasculino()
-                            //comprueba si son hermanos
-                            && !parentescoHermanos(i, j)
-                            //comprueba si uno es padre o madre de otro
-                            && !parentescoMadre(i, j)
-                            && !parentescoPadre(i, j)
-                            //&&i.getNumeroCrias()<3
-                            //&&j.getNumeroCrias()<3
-                            && numeroCriasPareja(i, j, animalesNuevos) < 3) {
-                        //&&!comprobarMadre(i,j)
-                        //&&!comprobarMadre(j,i)
-                        //&&!comprobarPadre(i,j)
-                        //&&!comprobarPadre(j,i)
+                if (i.getClass() == j.getClass()
+                        //comprueba los sexos
+                        && i.isMasculino() != j.isMasculino()
+                        //comprueba si son hermanos
+                        && !GeneracionCrias.parentescoHermanos(i, j)
+                        //comprueba si uno es padre o madre de otro
+                        && !GeneracionCrias.parentescoMadre(i, j)
+                        && !GeneracionCrias.parentescoPadre(i, j)
+                        //&&i.getNumeroCrias()<3
+                        //&&j.getNumeroCrias()<3
+                        && GeneracionCrias.numeroCriasPareja(i, j, animalesNuevos) < maxCrias) {
 
-                        //comprueba si tienen abuelos en comun
-                        //&&!comprobarAbuelos(generarAbuelos(i),generarAbuelos(j))
-                        //&&!comprobarAbuelas(generarAbuelas(i),generarAbuelas(j))
-                        // ) {
-                        //instanciamos el objeto
+                    //instanciamos el objeto
+                    generacion = Math.max(i.getGeneracion(), j.getGeneracion()) + 1;
+                    Random random = new Random();
+                    Animal padre = i.isMasculino() ? i : j;
+                    Animal madre = i.isMasculino() ? j : i;
+                    //si cumplen 2 animales de la lista la condición se reproducen las veces necesarias para llegar al maximo de crias
+                    for (int k = 0; k < maxCrias; k++) {
                         if (i instanceof Gato) {
-                            generacion = Math.max(i.getGeneracion(), j.getGeneracion()) + 1;
-                            Random random = new Random();
-                            if (i.isMasculino()) {
-                                animalesNuevos.add(new Gato(i.getRaza(), i, j, generacion, random.nextBoolean(), ((Gato) i).getNombre(), ((Gato) j).getPropietario()));
-                            } else {
-                                animalesNuevos.add(new Gato(i.getRaza(), j, i, generacion, random.nextBoolean(), ((Gato) i).getNombre(), ((Gato) i).getPropietario()));
-                            }
-
+                            animalesNuevos.add(new Gato(i.getRaza(), padre, madre, generacion, random.nextBoolean(), ((Gato) padre).getNombre(), ((Gato) madre).getPropietario()));
                         }
                         if (i instanceof Oveja) {
-                            generacion = Math.max(i.getGeneracion(), j.getGeneracion()) + 1;
-                            Random random = new Random();
-                            if (i.isMasculino()) {
-                                animalesNuevos.add(new Oveja(i.getRaza(), i, j, generacion, random.nextBoolean(), ((Oveja) j).getPropietario()));
-                            } else {
-                                animalesNuevos.add(new Oveja(i.getRaza(), j, i, generacion, random.nextBoolean(), ((Oveja) j).getPropietario()));
-                            }
 
+                            animalesNuevos.add(new Oveja(i.getRaza(), padre, madre, generacion, random.nextBoolean(), ((Oveja) madre).getPropietario()));
                         }
                         if (i instanceof Perro) {
-                            generacion = Math.max(i.getGeneracion(), j.getGeneracion()) + 1;
-                            Random random = new Random();
-                            if (i.isMasculino()) {
-                                animalesNuevos.add(new Perro(i.getRaza(), i, j, generacion, random.nextBoolean(), ((Perro) i).getNombre(), ((Perro) j).getPropietario()));
-                            } else {
-                                animalesNuevos.add(new Perro(i.getRaza(), j, i, generacion, random.nextBoolean(), ((Perro) i).getNombre(), ((Perro) i).getPropietario()));
-                            }
+                            animalesNuevos.add(new Perro(i.getRaza(), padre, madre, generacion, random.nextBoolean(), ((Perro) padre).getNombre(), ((Perro) madre).getPropietario()));
                         }
-
 
                         if (i instanceof PezPayaso) {
-                            generacion = Math.max(i.getGeneracion(), j.getGeneracion()) + 1;
-                            Random random = new Random();
-                            if (i.isMasculino()) {
-                                animalesNuevos.add(new PezPayaso(i.getRaza(), i, j, generacion, random.nextBoolean()));
-                            } else {
-                                animalesNuevos.add(new PezPayaso(i.getRaza(), j, i, generacion, random.nextBoolean()));
-                            }
-
+                            animalesNuevos.add(new PezPayaso(i.getRaza(), padre, madre, generacion, random.nextBoolean()));
                         }
                         if (i instanceof Tucan) {
-                            generacion = Math.max(i.getGeneracion(), j.getGeneracion()) + 1;
-                            Random random = new Random();
-                            if (i.isMasculino()) {
-                                animalesNuevos.add(new Tucan(i.getRaza(), i, j, generacion, random.nextBoolean()));
-                            } else {
-                                animalesNuevos.add(new Tucan(i.getRaza(), j, i, generacion, random.nextBoolean()));
-                            }
+                            animalesNuevos.add(new Tucan(i.getRaza(), padre, madre, generacion, random.nextBoolean()));
                         }
                         if (i instanceof Vaca) {
-
-                            generacion = Math.max(i.getGeneracion(), j.getGeneracion()) + 1;
-                            Random random = new Random();
-                            if (i.isMasculino()) {
-                                animalesNuevos.add(new Vaca(i.getRaza(), i, j, generacion, random.nextBoolean(), ((Vaca) j).getPropietario()));
-                            } else {
-                                animalesNuevos.add(new Vaca(i.getRaza(), j, i, generacion, random.nextBoolean(), ((Vaca) j).getPropietario()));
-                            }
+                            animalesNuevos.add(new Vaca(i.getRaza(), padre, madre, generacion, random.nextBoolean(), ((Vaca) madre).getPropietario()));
 
                         }
-
                     }
-                }
 
-            }
-            numPoblacion = listaAnimales.size();
-            listaAnimales = animalesNuevos;
-            int index = 0;
-            for (int i = 0; i < listaAnimales.size(); i++) {
-                if (listaAnimales.get(i).getGeneracion() > maxGeneracion) {
-                    maxGeneracion = listaAnimales.get(i).getGeneracion();
-                    index = i;
                 }
             }
 
         }
 
-        return listaAnimales;
-    }
 
+        return animalesNuevos;
+    }
 
     public static boolean parentescoPadre(Animal animal1, Animal animal2) {
         //si los dos son de primera generación entonces no puede ser uno padre del otro

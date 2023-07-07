@@ -193,8 +193,8 @@ public class Main {
             for (Animal i : listaAnimales) {
 
                 //condiciones ternarias variable si ()?->verdadero entonces primeraSentencia: y ()?->falso entonces segunda sentencia
-                String padre = i.getPadre() == null ? "" : String.valueOf(i.getPadre().getId());
-                String madre = i.getMadre() == null ? "" : String.valueOf(i.getMadre().getId());
+                String padre = i.getPadre() == null ? "0" : String.valueOf(i.getPadre().getId());
+                String madre = i.getMadre() == null ? "0" : String.valueOf(i.getMadre().getId());
                 String linea = null;
                 if (i instanceof Mascota) {
                     linea = i.getId() + "," + ((Gato) i).getNombre() + "," + i.getTipo() + "," + padre
