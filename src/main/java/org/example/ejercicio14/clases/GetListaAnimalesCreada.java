@@ -1,6 +1,7 @@
 package org.example.ejercicio14.clases;
 
 import org.example.ejercicio13.clases.*;
+import org.example.ejercicio22.clases.Granjero;
 
 import java.util.ArrayList;
 
@@ -12,10 +13,6 @@ public class GetListaAnimalesCreada {
         arcaNoe.add(g_mas);
         Gato g_fem=new Gato("persa", false, "María","Noe");
         arcaNoe.add(g_fem);
-        Oveja o_mas= new Oveja("lanuda",true,"Noe");
-        arcaNoe.add(o_mas);
-        Oveja o_fem= new Oveja("lanuda",false, "Noe");
-        arcaNoe.add(o_fem);
         Perro p_mas=new Perro("labrador",true,"Lucas","Noe");
         arcaNoe.add(p_mas);
         Perro p_fem=new Perro("labrador",false,"Espe","Noe");
@@ -28,23 +25,29 @@ public class GetListaAnimalesCreada {
         arcaNoe.add(t_mas);
         Tucan t_fem= new Tucan("amazonico",false);
         arcaNoe.add(t_fem);
-        Vaca v_mas=new Vaca("gallega",true, "Noe" );
+        Granjero gr= new Granjero("Noe");
+        Oveja o_mas= new Oveja("lanuda",true,gr);
+        arcaNoe.add(o_mas);
+        Oveja o_fem= new Oveja("lanuda",false, gr);
+        Vaca v_mas=new Vaca("gallega",true, gr);
         arcaNoe.add(v_mas);
-        Vaca v_fem= new Vaca("gallega",false,"Noe");
+        Vaca v_fem= new Vaca("gallega",false,gr);
         arcaNoe.add(v_fem);
         return arcaNoe;
     }
     public static ArrayList<Animal> recuperarListaCreada2(){
         ArrayList<Animal> arcaNoe= new ArrayList<>();
+        Granjero gr= new Granjero("Noe");
+
         Gato g_mas= new Gato("persa",true,"Firulais","Noe");
         arcaNoe.add(g_mas);
         Gato g_fem=new Gato("persa", false, "María","Noe");
         arcaNoe.add(g_fem);
         Gato g2_mas = new Gato("persa", true, "Gregorio", "Juan");
         arcaNoe.add(g2_mas);
-        Oveja o_mas= new Oveja("lanuda",true,"Noe");
+        Oveja o_mas= new Oveja("lanuda",true,gr);
         arcaNoe.add(o_mas);
-        Oveja o_fem= new Oveja("lanuda",false, "Noe");
+        Oveja o_fem= new Oveja("lanuda",false, gr);
         arcaNoe.add(o_fem);
         Perro p_mas=new Perro("labrador",true,"Lucas","Noe");
         arcaNoe.add(p_mas);
@@ -57,9 +60,9 @@ public class GetListaAnimalesCreada {
         arcaNoe.add(t_mas);
         Tucan t_fem= new Tucan("amazonico",false);
         arcaNoe.add(t_fem);
-        Vaca v_mas=new Vaca("gallega",true, "Noe" );
+        Vaca v_mas=new Vaca("gallega",true, gr);
         arcaNoe.add(v_mas);
-        Vaca v_fem= new Vaca("gallega",false,"Noe");
+        Vaca v_fem= new Vaca("gallega",false,gr);
         arcaNoe.add(v_fem);
         return arcaNoe;
     }
