@@ -16,7 +16,7 @@ public class Main {
         int idSeleccionado= Input.integer("Introduce el valor del id del animal del cual quieres obtener su arbol genealogico");
         ArrayList<Animal> abuelos= new ArrayList<>();
         Map<Integer,Animal> listaRefAnimales= Animal.getIdAnimalRef();
-        Animal a= listaAnimales.get(idSeleccionado);
+        Animal a= listaRefAnimales.get(idSeleccionado);
         abuelos=GetAncestros.getAncestros(a);
         System.out.println(a.getGeneracion());
         for(Animal i: abuelos){

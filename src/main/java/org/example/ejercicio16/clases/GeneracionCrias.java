@@ -150,7 +150,8 @@ public class GeneracionCrias {
                         }
                         if (i instanceof Oveja) {
 
-                            animalesNuevos.add(new Oveja(i.getRaza(), padre, madre, generacion, random.nextBoolean(), ((Oveja) madre).getPropietario()));
+                            animalesNuevos.add(new Oveja(i.getRaza(), padre, madre, generacion, random.nextBoolean(), ((Oveja) madre).getGranjeroPropietario()));
+
                         }
                         if (i instanceof Perro) {
                             animalesNuevos.add(new Perro(i.getRaza(), padre, madre, generacion, random.nextBoolean(), ((Perro) padre).getNombre(), ((Perro) madre).getPropietario()));
@@ -163,7 +164,7 @@ public class GeneracionCrias {
                             animalesNuevos.add(new Tucan(i.getRaza(), padre, madre, generacion, random.nextBoolean()));
                         }
                         if (i instanceof Vaca) {
-                            animalesNuevos.add(new Vaca(i.getRaza(), padre, madre, generacion, random.nextBoolean(), ((Vaca) madre).getPropietario()));
+                            animalesNuevos.add(new Vaca(i.getRaza(), padre, madre, generacion, random.nextBoolean(), ((Vaca) madre).getGranjeroPropietario()));
 
                         }
                     }

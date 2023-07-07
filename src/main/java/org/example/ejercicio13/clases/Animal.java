@@ -142,7 +142,7 @@ public abstract class Animal  implements ISexual {
     }
     public Animal fijarMadre(){
         if(this.idMadre!=0){
-            Animal a=idAnimalRef.get(this.idPadre);
+            Animal a=idAnimalRef.get(this.idMadre);
             return a;
         }else{
             return null;

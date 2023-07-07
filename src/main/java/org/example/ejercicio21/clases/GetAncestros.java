@@ -9,7 +9,6 @@ public class GetAncestros {
 
     public static ArrayList<Animal> getAncestros(Animal animal) {
         ArrayList<Animal> ancestros = new ArrayList<>();
-        ArrayList<Animal> vacio= new ArrayList<>();
         if(animal.getIdPadre()!=0){
             ancestros.add(animal.getPadre());
             ArrayList<Animal> temp=getAncestros(animal.getPadre());
@@ -19,9 +18,8 @@ public class GetAncestros {
         if(animal.getIdMadre()!=0){
             ancestros.add(animal.getMadre());
             ancestros.addAll(getAncestros(animal.getMadre()));
-        }else{
-
         }
+
         return ancestros;
 
     }
