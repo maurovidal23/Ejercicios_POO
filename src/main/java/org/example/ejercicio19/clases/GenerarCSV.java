@@ -1,28 +1,13 @@
-package org.example.ejercicio19;
+package org.example.ejercicio19.clases;
 
 import org.example.ejercicio13.clases.*;
-import org.example.ejercicio14.clases.GetListaAnimalesCreada;
-import org.example.ejercicio16.clases.GeneracionCrias;
-import org.example.ejercicio19.clases.GenerarCSV;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Random;
 
-public class Main {
-    public static void main(String[] Args) {
-        ArrayList<Animal> listaAnimales = new ArrayList<>();
-        listaAnimales= GetListaAnimalesCreada.recuperarListaCreada3();
-        ArrayList<Animal> listaCrias= new ArrayList<>();
-        listaCrias= GeneracionCrias.devulveListaCrias(listaAnimales,2);
-        listaCrias=GeneracionCrias.devulveListaCrias(listaCrias,2);
-        listaCrias=GeneracionCrias.devulveListaCrias(listaCrias,2);
-        listaCrias=GeneracionCrias.devulveListaCrias(listaCrias,2);
-        GenerarCSV.generarCSV(listaCrias);
-    }
-    /*
+public class GenerarCSV {
     public static void generarCSV(ArrayList<Animal> listaAnimales) {
         File file = new File("salida.csv");
         PrintWriter pw = null;
@@ -64,6 +49,4 @@ public class Main {
         }
 
     }
-
-     */
 }
