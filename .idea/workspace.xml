@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3161b309-fa39-4470-956f-33a14060b58f" name="Changes" comment="1.5-Implementacion clase Granjero">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio19/clases/GenerarCSV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicioEXTRA/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicioEXTRA/clases/UsoDependenciaJSON.java" afterDir="false" />
+    <list default="true" id="3161b309-fa39-4470-956f-33a14060b58f" name="Changes" comment="1.6-Implementacion uso de notación lambda en los primeros ejercicios">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio01_1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio02_1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio03_1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio04_1/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salida.csv" beforeDir="false" afterPath="$PROJECT_DIR$/salida.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio19/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio19/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio20/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio20/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio20/clases/LecturaArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio20/clases/LecturaArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ejercicio01/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ejercicio01/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688720161450</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="1.5-Implementacion del uso de dependencias OpenCSV y org.JSON">
+      <created>1688745155854</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688745155854</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,7 +216,9 @@
     <MESSAGE value="1.4-Arreglada implementacion crias" />
     <MESSAGE value="1.5-Abstraccion GeneracionCrias a una clase y su respectivas implementaciones." />
     <MESSAGE value="1.5-Implementacion clase Granjero" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.5-Implementacion clase Granjero" />
+    <MESSAGE value="1.5-Implementacion del uso de dependencias OpenCSV y org.JSON" />
+    <MESSAGE value="1.6-Implementacion uso de notación lambda en los primeros ejercicios" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.6-Implementacion uso de notación lambda en los primeros ejercicios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -225,6 +231,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/ejercicio06/Main.java</url>
           <line>14</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/ejercicio13/clases/Animal.java</url>
+          <line>148</line>
+          <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/ejercicio21/clases/GetAncestros.java</url>

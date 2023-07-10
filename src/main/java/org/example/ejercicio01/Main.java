@@ -14,5 +14,7 @@ public class Main {
         }else{
             System.out.println("El número " + a + " es impar");
         }
+
+
     }
 }
